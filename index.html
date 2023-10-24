@@ -1,44 +1,93 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
 
-  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  
-  <title>Frontend Mentor | Tip calculator app</title>
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
 
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
-</head>
-<body>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,700;1,700&display=swap"
+      rel="stylesheet"
+    />
+    <link href="styles.css" rel="stylesheet" />
+    <title>Frontend Mentor | Tip calculator app</title>
+  </head>
+  <body class="typography">
+    <main>
+      <div class="top">
+        <h1>SPLI</h1>
+        <h1>TTER</h1>
+      </div>
+      <div class="container">
+        <div class="left flex-column">
+          <section>
+            <label for="bill">Bill</label>
+            <div class="relative">
+              <div class="dollar-icon"></div>
+              <input
+                type="number"
+                id="bill"
+                class="typography"
+                placeholder="0"
+              />
+            </div>
+          </section>
 
-  Bill
+          <section>
+            <label for="tip">Select Tip %</label>
+            <p class="tile selected typography">5%</p>
+            <p class="tile selected typography">10%</p>
+            <p class="tile selected typography">15%</p>
+            <p class="tile selected typography">20%</p>
+            <p class="tile selected typography">25%</p>
+            <p class="tile typography custom-tile">Custom</p>
+          </section>
 
-  Select Tip %
-  5%
-  10%
-  15%
-  25%
-  50%
-  Custom
+          <section>
+            <label for="noofpeople">No of people</label>
+            <div class="relative">
+              <div class="user-icon"></div>
+              <input
+                type="number"
+                id="noofpeople"
+                class="typography"
+                placeholder="0"
+              />
+            </div>
+          </section>
+        </div>
+        <div class="right">
+          <!-- Bill Select Tip % 5% 10% 15% 25% 50% Custom Number of People Tip
+          Amount / person Total / person Reset -->
 
-  Number of People
+          <section class="justify-between">
+            <p class="result typography result__title">
+              Tip Amount <sub class="result__subtitle">/ person</sub>
+            </p>
+            <span class="result typography result__amount">$0.0</span>
+          </section>
 
-  Tip Amount
-  / person
+          <section class="justify-between">
+            <p class="result typography result__title">
+              Total <sub class="result__subtitle">/ person</sub>
+            </p>
+            <p class="result typography result__amount">$0.0</p>
+          </section>
 
-  Total
-  / person
+          <div class="spacer"></div>
 
-  Reset
-  
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
-  </div>
-</body>
+          <button class="reset typography">RESET</button>
+        </div>
+      </div>
+    </main>
+  </body>
 </html>
